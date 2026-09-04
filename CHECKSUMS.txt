@@ -1,7 +1,20 @@
-frontend/index.html
-MD5=249ac40edfee5500b2a79e3cf08e3b31
-SHA256=027ab99d052308db8205303d8e50d8f614b7272c77879a4e715707362ff97181
-SIZE=2122123
-VERSION=146.0.0-consolidation
-MODULES=44
-DATE=2026-08-27T17:39:36Z
+d6904870f5150e932209c7cea2d45362  index.html
+eee0580fbbc2ff5ca5ab8c1b207d0925  assets/js/sycam-core-minimal.js
+3ef91a60df8bb1dc437dafab5947f118  assets/js/sycam-v219-mobile-shell.js
+5f167b8849fe7fdfbeefb22e4a888550  assets/js/sycam-v220-live-feed-explorer.js
+9fb6bdff817fae8f35b2de7627c13f69  assets/js/sycam-v221-mobile-publish.js
+65a26021bc59cb541699435d0589a668  assets/js/sycam-v222-mobile-network.js
+61279e13fab6700167ffdd159c7568b6  assets/js/sycam-v223-stories-status.js
+3c8ca9052eea6428c87a559736a3fcd5  assets/js/sycam-v224-local-notifications.js
+26e60ac08b5c3f83f860eab3ae5dd7ba  assets/js/sycam-v225-demo-walkthrough.js
+9a42a86824ff71995d68d47b1b2d5635  assets/js/sycam-v226-offline-mode.js
+32190195d376136bd50e3ef54d33d7c2  assets/js/sycam-v227-pwa-register.js
+80c6a2c26d3b77c2bd8ff17bf092affe  assets/js/sycam-v228-plus-menu-hub.js
+8b92e78f2cb14bd34fecfcebafe1da16  assets/js/sycam-v229-onboarding.js
+1e495c0659e2f07fb6f15b01a51e0030  assets/js/sycam-v230-home-shortcuts-news.js
+03459c55b2357a808b398715001e86ab  assets/js/sycam-v231-health-qa.js
+9354aacdf091bacf4cbd559ff2a116eb  assets/js/sycam-v232-hal-client.js
+33d5435a21d73d4ae870286652a437e9  assets/css/sycam-v219-mobile-responsive.css
+e8202a2a9ef9f7c3a6d5e955098eeefc  sw.js
+7e3a7ccc6523ded5d01a1d26e75325e0  manifest.webmanifest
+0ec86c1b9fabcb2d3f62390ab3b25bed  icon.svg
