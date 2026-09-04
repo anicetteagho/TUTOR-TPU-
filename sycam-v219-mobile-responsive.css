@@ -1,0 +1,439 @@
+/* SYCAM V219 — Mobile-first responsive shell
+   Safe areas · touch targets · professional cards · bottom nav 5 items
+*/
+:root {
+  --sycam-bg: #0b1220;
+  --sycam-surface: #111827;
+  --sycam-surface-2: #1f2937;
+  --sycam-border: #1f2937;
+  --sycam-text: #e2e8f0;
+  --sycam-muted: #94a3b8;
+  --sycam-accent: #0d7377;
+  --sycam-accent-2: #2dd4bf;
+  --sycam-danger: #7f1d1d;
+  --sycam-radius: 14px;
+  --sycam-nav-h: 64px;
+  --sycam-header-h: 56px;
+  --sycam-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --sycam-safe-top: env(safe-area-inset-top, 0px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body.sycam-v219-mobile {
+  margin: 0;
+  background: var(--sycam-bg) !important;
+  color: var(--sycam-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding-bottom: calc(var(--sycam-nav-h) + var(--sycam-safe-bottom) + 8px) !important;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Header compact mobile */
+.sycam-v219-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: calc(8px + var(--sycam-safe-top)) 12px 8px;
+  background: rgba(11, 18, 32, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sycam-border);
+  min-height: var(--sycam-header-h);
+}
+
+.sycam-v219-header .brand {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.sycam-v219-header .status-pill {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--sycam-surface-2);
+  color: var(--sycam-accent-2);
+}
+
+.sycam-v219-header button.icon-btn {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--sycam-surface-2);
+  color: var(--sycam-text);
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottom navigation — max 5 */
+.sycam-v219-bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  height: calc(var(--sycam-nav-h) + var(--sycam-safe-bottom));
+  padding-bottom: var(--sycam-safe-bottom);
+  background: rgba(17, 24, 39, 0.96);
+  border-top: 1px solid var(--sycam-border);
+  backdrop-filter: blur(14px);
+}
+
+.sycam-v219-bottom-nav button {
+  border: 0;
+  background: transparent;
+  color: var(--sycam-muted);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 44px;
+  cursor: pointer;
+  padding: 6px 2px;
+}
+
+.sycam-v219-bottom-nav button .ico {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.sycam-v219-bottom-nav button.on,
+.sycam-v219-bottom-nav button:active {
+  color: var(--sycam-accent-2);
+}
+
+.sycam-v219-bottom-nav button.publish-fab .ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sycam-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-top: -12px;
+  box-shadow: 0 4px 16px rgba(13, 115, 119, 0.45);
+}
+
+/* Page containers */
+#pg-mission,
+#pg-mobilehome,
+#pg-plusmenu {
+  padding: 12px 14px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#pg-mission h1,
+#pg-mobilehome h1,
+#pg-plusmenu h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.v219-sub {
+  font-size: 12px;
+  color: var(--sycam-muted);
+  margin: 0 0 14px;
+}
+
+/* Cards professional */
+.v219-card {
+  background: var(--sycam-surface);
+  border: 1px solid var(--sycam-border);
+  border-radius: var(--sycam-radius);
+  padding: 14px;
+  margin: 0 0 12px;
+}
+
+.v219-card h3 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--sycam-accent-2);
+  font-weight: 700;
+}
+
+.v219-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.v219-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.v219-kpi {
+  background: #030712;
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.v219-kpi .n {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.v219-kpi .l {
+  font-size: 10px;
+  color: var(--sycam-muted);
+  margin-top: 4px;
+}
+
+.v219-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #030712;
+  border: 1px solid var(--sycam-border);
+  color: var(--sycam-text);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 72px;
+  box-sizing: border-box;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+}
+
+.v219-tile .t-ico {
+  font-size: 18px;
+}
+
+.v219-tile .t-label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.v219-tile .t-hint {
+  font-size: 10px;
+  color: var(--sycam-muted);
+}
+
+.v219-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--sycam-border);
+}
+
+.v219-row:last-child {
+  border-bottom: 0;
+}
+
+.v219-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.v219-actions button,
+.v219-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  background: var(--sycam-surface-2);
+  color: var(--sycam-text);
+  min-height: 44px;
+}
+
+.v219-actions button.primary,
+.v219-btn.primary {
+  background: var(--sycam-accent);
+  color: #fff;
+}
+
+.v219-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.v219-chip {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--sycam-surface-2);
+  color: var(--sycam-text);
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.v219-chip.on {
+  background: var(--sycam-accent);
+  color: #fff;
+}
+
+.v219-feed-card {
+  background: #fff;
+  color: #0f172a;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.v219-feed-card .tag {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.v219-feed-card h4 {
+  margin: 6px 0 4px;
+  font-size: 15px;
+  line-height: 1.35;
+  color: #0f172a;
+}
+
+.v219-feed-card .meta {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.v219-feed-card .excerpt {
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.v219-search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--sycam-border);
+  background: #030712;
+  color: var(--sycam-text);
+  font-size: 14px;
+  min-height: 44px;
+  margin-bottom: 12px;
+}
+
+.v219-ok { color: #34d399; }
+.v219-no { color: #f87171; }
+
+/* Hide legacy dense chrome on small screens when shell active */
+@media (max-width: 767px) {
+  body.sycam-v219-mobile .legacy-side-nav,
+  body.sycam-v219-mobile aside.sidebar,
+  body.sycam-v219-mobile .desktop-only {
+    display: none !important;
+  }
+
+  body.sycam-v219-mobile main,
+  body.sycam-v219-mobile .page,
+  body.sycam-v219-mobile section.page {
+    max-width: 100% !important;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  body.sycam-v219-mobile img,
+  body.sycam-v219-mobile video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  body.sycam-v219-mobile table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .v219-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .v219-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  #pg-mission,
+  #pg-mobilehome,
+  #pg-plusmenu {
+    max-width: 900px;
+    padding: 20px 24px 40px;
+  }
+  .sycam-v219-bottom-nav {
+    max-width: 520px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* Desktop: bottom nav can become side hint — still usable */
+@media (min-width: 1024px) {
+  body.sycam-v219-mobile {
+    padding-bottom: 24px !important;
+  }
+  .sycam-v219-bottom-nav {
+    max-width: 560px;
+  }
+  .v219-grid-home {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

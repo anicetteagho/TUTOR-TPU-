@@ -1,12 +1,21 @@
-# SYCAM-PUB V217 — Device Attachment
+# SYCAM-PUB v231 (pack propre)
 
-Rattachement à la demande (Termux / 127.0.0.1).
+Uniquement les fichiers pour lancer la version mobile améliorée.
 
-```js
-SycamV217.openDevice()
-await SycamV217.discoverLocal()
-await SycamV217.attach('http://127.0.0.1:8765')
-SycamV217.detach()
+## Lancer
+
+```bash
+cd sycam-pub
+python -m http.server 8080
 ```
 
-Backend exemple : `backend/termux-local-api-example.py`
+Ouvrir http://127.0.0.1:8080
+
+## Nouveauté V231
+
+- Page **Santé système** (checklist QA)
+- Plus → Qualité → Santé
+
+```js
+SycamV231.openHealth()
+```
